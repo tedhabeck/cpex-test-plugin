@@ -1,6 +1,7 @@
 description: "A skeleton test plugin"
+kind: "isolated_venv"
 author: "habeck"
-version: "0.1.0"
+version: "0.1.1"
 available_hooks:
   - "prompt_pre_hook"
   - "prompt_post_hook"
