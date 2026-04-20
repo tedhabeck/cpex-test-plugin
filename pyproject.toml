@@ -1,0 +1,117 @@
+[project]
+name = "cpex-test-plugin"
+version = "0.1.0"
+description = "Test plugin for CPEX framework"
+license = { text = "Apache-2.0" }
+license-files = ["LICENSE"]
+keywords = ["CPEX","API","tools",
+  "agents","agentic ai","model context protocol","multi-agent","fastapi",
+  "json-rpc","sse","websocket","federation","security","authentication"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: FastAPI",
+    "Framework :: AsyncIO",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Software Development :: Libraries :: Application Frameworks"
+]
+
+readme = "README.md"
+requires-python = ">=3.11"
+maintainers = [
+    {name = "Ted Habeck", email = "habeck@us.ibm.com"}
+]
+
+authors = [
+    {name = "Ted Habeck", email = "habeck@us.ibm.com"}
+]
+
+dependencies = [
+    "cpex>=0.1.0.dev10"
+]
+
+[project.urls]
+Repository = "https://github.com/tedhabeck/cpex_test_plugin"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+asyncio_mode = "auto"
+
+[project.optional-dependencies]
+dev = [
+    "black>=26.3.1",
+    "hatchling>=1.29.0",
+    "pytest>=8.0",
+    "pytest-cov>=7.0.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.15.10",
+    "check-manifest>=0.50",
+    "twine>=6.2.0",
+]
+
+[tool.check-manifest]
+ignore = [
+    "docs/**",
+    "tests/**",
+    ".github/**",
+    "Makefile",
+]
+
+[tool.ruff]
+line-length = 120
+
+# Linter configuration
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Also "D1" for docstring present checks.
+# "PL" enables Pylint rules natively in ruff (replaces pylint for these checks).
+select = ["E3", "E4", "E7", "E9", "F", "D1", "PL", "I"]
+ignore = [
+    # ---- Rules already disabled in .pylintrc (intentionally relaxed) ----
+    "PLR0904",  # too-many-public-methods  (pylint R0904)
+    "PLR0912",  # too-many-branches        (pylint R0912)
+    "PLR0913",  # too-many-arguments       (pylint R0913)
+    "PLR0914",  # too-many-locals          (pylint R0914)
+    "PLR0915",  # too-many-statements      (pylint R0915)
+    # ---- Accepted codebase patterns (high violation count, tolerated by pylint scoring) ----
+    "PLC0415",  # import-outside-top-level (pylint C0415) — lazy-import patterns
+    "PLW0603",  # global-statement         (pylint W0603) — config/singleton patterns
+    "PLR0911",  # too-many-returns
+    "PLR0917",  # too-many-positional-args
+    "PLR1702",  # too-many-nested-blocks
+    # ---- Ruff-only PL rules with no pylint equivalent (out of migration scope) ----
+    "PLC1901",  # compare-to-empty-string  (deprecated in pylint)
+    "PLC2701",  # import-private-name      (ruff-only)
+    "PLR2004",  # magic-value-comparison   (ruff-only)
+    "PLR5501",  # collapsible-else-if      (ruff-only)
+    "PLR6104",  # non-augmented-assignment (ruff-only)
+    "PLR6201",  # literal-membership       (ruff-only)
+    "PLR6301",  # no-self-use              (ruff-only)
+    "PLW2901",  # redefined-loop-name      (ruff-only)
+]
+
+preview = true
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Ignore D1 (docstring checks) and Pylint checks in tests and other non-production code
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["D1", "PL"]
+"scripts/**/*.py" = ["D1", "PL"]
+".github/**/*.py" = ["D1", "PL"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cpex_test_plugin"]

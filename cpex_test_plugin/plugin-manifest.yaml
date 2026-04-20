@@ -1,0 +1,11 @@
+description: "A skeleton test plugin"
+author: "habeck"
+version: "0.1.0"
+available_hooks:
+  - "prompt_pre_hook"
+  - "prompt_post_hook"
+  - "tool_pre_hook"
+  - "tool_post_hook"
+default_config:
+    class_name: "cpex_test_plugin.plugin.TestPlugin"
+    requirements_file: "requirements.txt"
