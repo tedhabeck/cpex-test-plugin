@@ -1,6 +1,6 @@
 [project]
 name = "cpex-test-plugin"
-version = "0.1.2"
+version = "0.1.4"
 description = "Test plugin for CPEX framework"
 license = { text = "Apache-2.0" }
 license-files = ["LICENSE"]
