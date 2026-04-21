@@ -1,12 +1,12 @@
 description: "A skeleton test plugin"
 kind: "isolated_venv"
 author: "habeck"
-version: "0.1.1"
+version: "0.1.2"
 available_hooks:
-  - "prompt_pre_hook"
-  - "prompt_post_hook"
-  - "tool_pre_hook"
-  - "tool_post_hook"
+  - "prompt_pre_fetch"
+  - "prompt_post_fetch"
+  - "tool_pre_invoke"
+  - "tool_post_invoke"
 default_config:
     class_name: "cpex_test_plugin.plugin.TestPlugin"
     requirements_file: "requirements.txt"
