@@ -1,2 +1,2 @@
-cpex>=0.1.0.dev11
+git+https://github.com/contextforge-org/contextforge-plugins-framework
 git+https://github.com/tedhabeck/cpex-test-plugin
