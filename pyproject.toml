@@ -1,6 +1,6 @@
 [project]
 name = "cpex-test-plugin"
-version = "0.1.5"
+version = "0.1.6"
 description = "Test plugin for CPEX framework"
 license = { text = "Apache-2.0" }
 license-files = ["LICENSE"]
@@ -36,7 +36,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/tedhabeck/cpex_test_plugin"
+Repository = "https://github.com/tedhabeck/cpex-test-plugin"
 
 
 [tool.pytest.ini_options]

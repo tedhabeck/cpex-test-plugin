@@ -2,7 +2,7 @@ plugins:
   - name: "cpex_test_plugin"
     kind: "isolated_venv"
     description: "A filter plugin"
-    version: "0.1.5"
+    version: "0.1.6"
     author: "habeck"
     hooks: ["prompt_pre_fetch", "prompt_post_fetch", "tool_pre_invoke", "tool_post_invoke"]
     tags: ["plugin"]
