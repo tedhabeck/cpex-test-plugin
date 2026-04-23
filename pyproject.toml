@@ -1,6 +1,6 @@
 [project]
 name = "cpex-test-plugin"
-version = "0.1.8"
+version = "0.1.9"
 description = "Test plugin for CPEX framework"
 license = { text = "Apache-2.0" }
 license-files = ["LICENSE"]
@@ -112,6 +112,9 @@ unfixable = []
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["cpex_test_plugin"]
