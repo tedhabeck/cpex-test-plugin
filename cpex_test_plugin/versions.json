@@ -1,0 +1,40 @@
+{
+  "latest": {
+    "version": "0.2.0",
+    "released": "2026-04-27T11:31:54.717255+00:00Z",
+    "breaking_changes": null,
+    "deprecated": false,
+    "manifest_file": "plugin-catalog/cpex-test-plugin/plugin-manifest.yaml",
+    "changelog": null,
+    "min_max_framework_version": "0.1.0.dev12,0.1.0.dev12"
+  },
+  "latest_prerelease": {
+    "version": "0.2.0",
+    "released": "2026-04-27T11:31:54.717255+00:00Z",
+    "breaking_changes": null,
+    "deprecated": false,
+    "manifest_file": "plugin-catalog/cpex-test-plugin/plugin-manifest.yaml",
+    "changelog": null,
+    "min_max_framework_version": "0.1.0.dev12,0.1.0.dev12"
+  },
+  "versions": [
+    {
+      "version": "0.2.0",
+      "released": "2026-04-27T11:31:54.717255+00:00Z",
+      "breaking_changes": null,
+      "deprecated": false,
+      "manifest_file": "plugin-catalog/cpex-test-plugin/plugin-manifest.yaml",
+      "changelog": null,
+      "min_max_framework_version": "0.1.0.dev12,0.1.0.dev12"
+    },
+    {
+      "version": "0.1.9",
+      "released": "2026-04-24T19:19:54.717255+00:00Z",
+      "breaking_changes": null,
+      "deprecated": false,
+      "manifest_file": "plugin-catalog/cpex-test-plugin/plugin-manifest.yaml",
+      "changelog": null,
+      "min_max_framework_version": "0.1.0.dev12,0.1.0.dev12"
+    }
+  ]
+}

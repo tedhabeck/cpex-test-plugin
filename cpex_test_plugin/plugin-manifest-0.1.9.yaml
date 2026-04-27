@@ -1,7 +1,7 @@
 description: "A skeleton test plugin"
 kind: "isolated_venv"
 author: "habeck"
-version: "0.2.0"
+version: "0.1.9"
 tags: ["plugin"]
 conditions:
   # Apply to specific tools/servers
